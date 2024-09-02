@@ -14,9 +14,8 @@ This repository contains all the important DSA questions for interviews, coverin
 # Binary Tree
 ![binary tree](https://github.com/user-attachments/assets/78bed0ef-847f-470a-8306-7745d8f8f750)
 # Graph
-![heap](https://github.com/user-attachments/assets/a244961d-7f52-4fc6-91f2-2056895bebd7)
-# Heap
 ![graph](https://github.com/user-attachments/assets/8d10539d-c120-46db-a9cb-496cf5a2c2ce)
-
+# Heap
+![heap](https://github.com/user-attachments/assets/a244961d-7f52-4fc6-91f2-2056895bebd7)
 
 
