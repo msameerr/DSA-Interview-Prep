@@ -18,7 +18,7 @@ class Node
 };
 
 
-void print(Node* head)
+void printLinkedlist(Node* head)
 {
 
 	Node* temp = head;
@@ -256,3 +256,199 @@ Node* reverseLinkedList(Node*& head)
 }
 
 // Question 04 : Find Middle of the Linked List
+	//Node* head = NULL;
+	//insertAtHead(head, 2);
+	//insertAtTail(head, 4);
+	//insertAtHead(head, 1);
+	//insertAtTail(head, 5);
+	//insertAtMiddle(head, 3, 3);
+	//insertAtTail(head, 6);
+	//insertAtTail(head, 7);
+	//print(head);
+	//MiddleLinkedList(head);
+
+void MiddleLinkedList(Node*& head)
+{
+
+	Node* fast = head->next;
+	Node* slow = head;
+
+	while (fast != NULL)
+	{
+
+		slow = slow->next;
+
+		fast = fast->next;
+		if (fast != NULL)
+		{
+			fast = fast->next;
+		}
+
+	}
+
+	cout << "Middle - " << slow->data << endl;
+
+}
+
+
+// Question 05 : Reverse LinkedList in K-Groups
+
+Node* reverse_Kgroups(Node*& head, int k)
+{
+
+	if (head == NULL)
+		return NULL;
+
+	Node* current = head;
+	Node* prvs = NULL;
+	Node* forward = NULL;
+	int count = 0;
+
+	while (count < k && current != NULL)
+	{
+		forward = current->next;
+		current->next = prvs;
+		prvs = current;
+		current = forward;
+		count++;
+	}
+
+	if (forward != NULL)
+	{
+		head->next = reverse_Kgroups(forward, k);
+	}
+
+	return prvs;
+}
+
+
+// Question 06 : Merging two Linked List by k-groups
+// head1 : 1 -> 2 -> 3 -> 4
+// head2 : 5 -> 6 -> 7 -> 8
+// Output : 1 -> 2 -> 5 -> 6 -> 3 -> 4 -> 7 -> 8
+
+/*Node* head1 = NULL;
+	insertAtTail(head1, 1);
+	insertAtTail(head1, 2);
+	insertAtTail(head1, 3);
+	insertAtTail(head1, 4);
+
+	Node* head2 = NULL;
+	insertAtTail(head2, 5);
+	insertAtTail(head2, 6);
+	insertAtTail(head2, 7);
+	insertAtTail(head2, 8);*/
+
+
+void mergeLinkedList(Node* head1, Node* head2, int k)
+{
+	int turn = 0;
+
+	Node* curr1 = NULL;
+	Node* for1 = head1;
+
+	Node* curr2 = NULL;
+	Node* for2 = head2;
+
+	while (for1 != NULL && for2 != NULL)
+	{
+
+		if (turn % 2 == 0)
+		{
+			int count = 0;
+			while (count < k)
+			{
+				curr1 = for1;
+				for1 = for1->next;
+				count++;
+			}
+			curr1->next = for2;
+			turn++;
+		}
+		else
+		{
+			int count = 0;
+			while (count < k)
+			{
+				curr2 = for2;
+				for2 = for2->next;
+				count++;
+			}
+			curr2->next = for1;
+			turn++;
+		}
+
+	}
+	cout << "output : " << endl;
+
+	printLinkedlist(head1);
+
+}
+
+// Question 07 : Loop Detection in Circularly linkedlist
+// we use Floyd's cycle detection method
+
+void create_loop(Node*& head, int element)
+{
+
+	Node* temp = head;
+	while (temp->next != NULL)
+	{
+		temp = temp->next;
+	}
+
+	Node* findElement = head;
+	while (findElement->data != element)
+	{
+		findElement = findElement->next;
+	}
+
+	temp->next = findElement;
+	//print(head);
+}
+
+Node* FloydDetection(Node* head)
+{
+
+	if (head == NULL)
+	{
+		return NULL;
+	}
+
+	Node* slow = head;
+	Node* fast = head;
+	while (slow != NULL && fast != NULL)
+	{
+		fast = fast->next;
+		if (fast != NULL)
+		{
+			fast = fast->next;
+		}
+		slow = slow->next;
+
+
+		if (slow == fast)
+		{
+			return fast;
+		}
+	}
+	return NULL;
+
+}
+
+// Question 08 : Find start/Begining node of loop and remove loop in linked list
+	//Node* head = NULL;
+	//insertAtHead(head, 2);
+	//insertAtTail(head, 4);
+	//insertAtHead(head, 1);
+	//insertAtTail(head, 5);
+	//insertAtMiddle(head, 3, 3);
+	//insertAtTail(head, 6);
+	//insertAtTail(head, 7);
+	//print(head);
+	//create_loop(head, 4);
+
+	//Node* temp = FloydDetection(head);
+	//cout << temp->data << endl;
+
+

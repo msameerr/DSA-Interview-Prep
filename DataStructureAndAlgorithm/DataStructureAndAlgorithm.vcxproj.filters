@@ -24,12 +24,18 @@
     <ClCompile Include="linkedlist_File.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="binaryTree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="arrayfile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="linkedlist_File.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="binaryTree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -142,11 +142,13 @@
     <ClCompile Include="arrayfile.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="binaryTree.cpp" />
     <ClCompile Include="linkedlist_File.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="arrayfile.h" />
+    <ClInclude Include="binaryTree.h" />
     <ClInclude Include="linkedlist_File.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
