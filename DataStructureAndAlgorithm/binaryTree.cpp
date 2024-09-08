@@ -89,7 +89,7 @@ void LevelOrderTraversal(node* root)
 			if (temp->right != NULL)
 			{
 				q.push(temp->right);
-			}
+			}    
 		}
 
 	}
