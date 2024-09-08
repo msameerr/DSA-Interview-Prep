@@ -1,4 +1,5 @@
 #include<iostream>
+#include<queue>
 using namespace std;
 
 // Question 01 : Implement binary tree
@@ -50,5 +51,47 @@ void printTree(node* root)
 
 	printTree(root->left);
 	printTree(root->right);
+
+}
+
+// Question 02 : Level Order traversal 
+void LevelOrderTraversal(node* root)
+{
+
+	queue<node*>q;
+
+	q.push(root);
+	q.push(NULL);
+
+	while (!q.empty())
+	{
+
+		node* temp = q.front();
+		q.pop();
+
+		if (temp == NULL)
+		{
+			cout << endl;
+			if (!q.empty())
+			{
+				q.push(NULL);
+			}
+		}
+		else
+		{
+			cout << temp->data << " ";
+
+			if (temp->left != NULL)
+			{
+				q.push(temp->left);
+			}
+
+			if (temp->right != NULL)
+			{
+				q.push(temp->right);
+			}
+		}
+
+	}
 
 }

@@ -11,5 +11,7 @@ int main()
 	node* root = NULL;
 	BuildTree(root);
 	printTree(root);
+	cout << endl;
+	LevelOrderTraversal(root);
 
 }

@@ -18,5 +18,7 @@ public:
 node* BuildTree(node*& root);
 void printTree(node* root);
 
+void LevelOrderTraversal(node* root);
+
 
 #endif
