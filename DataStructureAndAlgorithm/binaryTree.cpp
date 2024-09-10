@@ -97,3 +97,37 @@ void LevelOrderTraversal(node* root)
 }
 
 // Question 03 : Implement PreOrder, PostOrder, InOrder
+void PreOrder(node* root)
+{
+	if (root == NULL)
+		return;
+
+	cout << root->data << " ";
+
+	printTree(root->left);
+	printTree(root->right);
+
+}
+
+void PostOrder(node* root)
+{
+	if (root == NULL)
+		return;
+
+
+	printTree(root->left);
+	printTree(root->right);
+	cout << root->data << " ";
+}
+
+void InOrder(node* root)
+{
+	if (root == NULL)
+		return;
+
+
+	printTree(root->left);
+	cout << root->data << " ";
+	printTree(root->right);
+
+}

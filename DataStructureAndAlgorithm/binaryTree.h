@@ -20,5 +20,9 @@ void printTree(node* root);
 
 void LevelOrderTraversal(node* root);
 
+void PreOrder(node* root);
+void PostOrder(node* root);
+void InOrder(node* root);
+
 
 #endif
