@@ -1,4 +1,4 @@
-# Data Structure and Algorithm
+# ✨ Data Structure and Algorithm
 This repository contains all the important DSA questions for interviews, covering topics like arrays, linked lists, graphs, trees, heaps, and more.
 
 # Array
