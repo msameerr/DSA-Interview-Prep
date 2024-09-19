@@ -104,8 +104,8 @@ void PreOrder(node* root)
 
 	cout << root->data << " ";
 
-	printTree(root->left);
-	printTree(root->right);
+	PreOrder(root->left);
+	PreOrder(root->right);
 
 }
 
@@ -115,8 +115,8 @@ void PostOrder(node* root)
 		return;
 
 
-	printTree(root->left);
-	printTree(root->right);
+	PostOrder(root->left);
+	PostOrder(root->right);
 	cout << root->data << " ";
 }
 
@@ -126,8 +126,52 @@ void InOrder(node* root)
 		return;
 
 
-	printTree(root->left);
+	InOrder(root->left);
 	cout << root->data << " ";
-	printTree(root->right);
+	InOrder(root->right);
+
+}
+
+// Question 04 : Build Binary tree from Level Order
+	//node* root = NULL;
+	//BuildLevelOrder(root);
+	//LevelOrderTraversal(root);
+
+void BuildLevelOrder(node* &root)
+{
+
+	cout << "Enter root Data : ";
+	int data;
+	cin >> data;
+	root = new node(data);
+
+	queue<node*> q;
+	q.push(root);
+
+	while (!q.empty())
+	{
+
+		node* temp = q.front();
+		q.pop();
+
+		cout << "Enter Left Data of " << temp->data << " : ";
+		int leftdata;
+		cin >> leftdata;
+		if (leftdata != -1)
+		{
+			temp->left = new node(leftdata);
+			q.push(temp->left);
+		}
+
+		cout << "Enter Right Data of " << temp->data << " : ";
+		int rightdata;
+		cin >> rightdata;
+		if (rightdata != -1)
+		{
+			temp->right = new node(rightdata);
+			q.push(temp->right);
+		}
+
+	}
 
 }

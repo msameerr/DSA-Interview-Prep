@@ -9,9 +9,7 @@ int main()
 {
 
 	node* root = NULL;
-	BuildTree(root);
-	printTree(root);
-	cout << endl;
+	BuildLevelOrder(root);
 	LevelOrderTraversal(root);
 
 }

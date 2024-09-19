@@ -24,5 +24,7 @@ void PreOrder(node* root);
 void PostOrder(node* root);
 void InOrder(node* root);
 
+void BuildLevelOrder(node* &root);
+
 
 #endif
