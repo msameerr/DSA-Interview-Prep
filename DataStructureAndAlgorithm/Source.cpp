@@ -2,8 +2,10 @@
 #include "arrayfile.h"
 #include "linkedlist_File.h"
 #include "binaryTree.h"
+#include "string.h"
 
 using namespace std;
+
 
 int main()
 {
@@ -12,9 +14,6 @@ int main()
 	BuildLevelOrder(root);
 	LevelOrderTraversal(root);*/
 
-
-	vector<int>v = { 1,9,8,9 };
-	plusOne(v);
 
 	
 

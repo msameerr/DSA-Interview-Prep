@@ -145,11 +145,13 @@
     <ClCompile Include="binaryTree.cpp" />
     <ClCompile Include="linkedlist_File.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="String.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="arrayfile.h" />
     <ClInclude Include="binaryTree.h" />
     <ClInclude Include="linkedlist_File.h" />
+    <ClInclude Include="string.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
