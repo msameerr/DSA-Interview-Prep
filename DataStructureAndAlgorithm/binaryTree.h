@@ -26,5 +26,6 @@ void InOrder(node* root);
 
 void BuildLevelOrder(node* &root);
 
+void leafNodes(node* root, int& count);
 
 #endif

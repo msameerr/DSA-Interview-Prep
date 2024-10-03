@@ -175,3 +175,35 @@ void BuildLevelOrder(node* &root)
 	}
 
 }
+
+// Question 05 : Count Leaf nodes
+//int cnt = 0;
+//leafNodes(root, cnt);
+//cout << cnt << endl;
+
+void leafNodes(node* root, int &count)
+{
+
+	if (root == NULL)
+	{
+		return;
+	}
+
+	if (root->left != NULL)
+	{
+		leafNodes(root->left,count);
+	}
+
+	if (root->right != NULL)
+	{
+		leafNodes(root->right,count);
+	}
+
+	if (root->left == NULL && root->right == NULL)
+	{
+		count = count + 1;
+	}
+	
+}
+
+// Question 06 : 

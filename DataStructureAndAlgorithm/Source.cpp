@@ -10,12 +10,10 @@ using namespace std;
 int main()
 {
 
-	/*node* root = NULL;
+	node* root = NULL;
 	BuildLevelOrder(root);
-	LevelOrderTraversal(root);*/
-
+	LevelOrderTraversal(root);
+	cout << endl;
 
 	
-
-
 }
