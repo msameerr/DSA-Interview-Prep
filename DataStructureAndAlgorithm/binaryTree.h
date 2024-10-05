@@ -28,4 +28,6 @@ void BuildLevelOrder(node* &root);
 
 void leafNodes(node* root, int& count);
 
+int height(node* root);
+
 #endif

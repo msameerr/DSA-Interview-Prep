@@ -15,5 +15,5 @@ int main()
 	LevelOrderTraversal(root);
 	cout << endl;
 
-	
+	cout << height(root);
 }

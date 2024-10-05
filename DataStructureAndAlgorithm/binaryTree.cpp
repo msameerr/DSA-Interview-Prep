@@ -206,4 +206,23 @@ void leafNodes(node* root, int &count)
 	
 }
 
-// Question 06 : 
+// Question 06 : Height of the binary tree
+
+int height(node* root)
+{
+
+	if (root == NULL)
+	{
+		return 0;
+	}
+
+	int left = height(root->left);
+	int right = height(root->right);
+
+	int ans = max(left, right) + 1;
+	cout << ans << endl;
+	return ans;
+
+}
+
+// Question 07 : Create a program that every node returns table of 2 
