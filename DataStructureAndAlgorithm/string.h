@@ -8,4 +8,6 @@ bool isPalindrome(std::string s);
 
 int firstUniqChar(std::string s);
 
+void reverse(std::string str);
+
 #endif

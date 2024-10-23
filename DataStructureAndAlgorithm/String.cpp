@@ -102,3 +102,22 @@ int firstUniqChar(string s) {
     }
     return -1;
 }
+
+
+// Question 03 : Reverse the String
+void reverse(string str)
+{
+
+    int n = str.length();
+    int start = 0; 
+    int end = n - 1;
+
+    while (start < end)
+    {
+        swap(str[start], str[end]);
+        start++;
+        end--;
+    }
+
+    cout << str;
+}

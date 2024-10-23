@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector>
+#include<map>
 
 using namespace std;
 
@@ -130,3 +131,30 @@ void plusOne(vector<int> digits) {
         cout << digits[j] << " ";
     }
 }
+
+
+// Question 03 : Find Duplicate in a array 
+// vector<int> arr = { 1,2,3,4,5,3 };
+// duplicate(arr);
+void duplicate(vector<int>arr)
+{
+
+    int n = arr.size();
+    map<int, int>count;
+
+    for (int i = 0; i < n; i++)
+    {
+        count[arr[i]]++;
+    }
+
+
+    for (auto temp : count)
+    {
+        if (temp.second > 1)
+        {
+            cout << "Duplicate " << temp.first << endl;
+        }
+    }
+
+}
+

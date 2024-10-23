@@ -9,4 +9,6 @@ void mergeArray(std::vector<int> nums1, int m, std::vector<int> nums2, int n);
 
 void plusOne(std::vector<int> digits);
 
+void duplicate(std::vector<int>arr);
+
 #endif

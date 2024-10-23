@@ -10,10 +10,13 @@ using namespace std;
 int main()
 {
 
-	node* root = NULL;
+	/*node* root = NULL;
 	BuildLevelOrder(root);
 	LevelOrderTraversal(root);
 	cout << endl;
 
-	cout << height(root);
+	cout << height(root);*/
+
+
+	reverse("sameer");
 }
