@@ -158,3 +158,259 @@ void duplicate(vector<int>arr)
 
 }
 
+
+// Question 04 : Swap two numbers without the third variable
+void two_swap()
+{
+
+    int a = 5, b = 10;
+
+    cout << "Before : " << a << " " << b << endl;
+    a = a + b;
+    b = a - b;
+    a = a - b;
+    cout << "After : " << a << " " << b << endl;
+
+}
+
+// Question 05 : Print Pattren
+// 4 3 2 1
+// 4 3 2 1
+// 4 3 2 1
+// 4 3 2 1
+
+void pattern1()
+{
+
+    int i = 0;
+    int n = 4;
+
+    while (i < n)
+    {
+        int j = n;
+
+        while (j >= 1)
+        {
+            cout << j << " ";
+            j--;
+        }
+        cout << endl;
+        i++;
+    }
+
+}
+
+// Question 06 : Print Pattren
+// 1 2 3
+// 4 5 6
+// 7 8 9
+
+void pattern2()
+{
+    int i = 0, j = 1;
+
+    int n = 3;
+
+
+    while (i < n)
+    {
+        int k = 0;
+        while (k < n)
+        {
+            cout << j << " ";
+            k++;
+            j++;
+        }
+        cout << endl;
+        i++;
+    }
+
+}
+
+// Question 07 : Print Pattren
+// *
+// * *
+// * * *
+// * * * *
+
+void pattern3()
+{
+
+    int i = 1;
+    int n = 4;
+
+    while (i <= n)
+    {
+        int k = 0;
+        while (k < i)
+        {
+            cout << "*" << " ";
+            k++;
+        }
+        cout << endl;
+
+        i++;
+    }
+
+}
+
+// Question 08 : Print Pattren
+// 1
+// 2 3 
+// 4 5 6 
+// 7 8 9 10
+
+void pattern4()
+{
+
+    int i = 1, count = 1;
+    int n = 4;
+
+    while (i <= n)
+    {
+        int k = 0;
+        while (k < i)
+        {
+            cout << count << " ";
+            k++; count++;
+        }
+        cout << endl;
+
+        i++;
+    }
+
+}
+
+// Question 09 : Print Pattren
+// 1
+// 2 1
+// 3 2 1
+// 4 3 2 1
+
+void pattern5()
+{
+
+    int i = 1;
+    int n = 4;
+
+    while (i <= n)
+    {
+
+        int j = i;
+        while (j >= 1)
+        {
+            cout << j << " ";
+            j--;
+        }
+        cout << endl;
+        i++;
+
+    }
+
+
+}
+
+// Question 10 : Print Pattren
+// * * * *
+// * * *
+// * *
+// * 
+
+void pattern6()
+{
+
+    int i = 1; 
+    int n = 4;
+    int count = 4;
+
+    while (i <= n)
+    {
+        int j = count;
+
+        while (j >= 1)
+        {
+            cout << "*" << " ";
+            j--;
+        }
+
+        cout << endl;
+        count--; i++;
+    }
+
+}
+
+// Question 11 : Print Pattern
+//       *
+//     * *
+//   * * *
+// * * * *
+
+void pattern7()
+{
+    int i = 1;
+    int n = 4;
+    int count = 3;
+
+    while (i <= n)
+    {
+        int j = 1;
+        while (j <= count)
+        {
+            cout << " ";
+            j++;
+        }
+
+        int k = i;
+        while (k >= 1)
+        {
+            cout << "*";
+            k--;
+        }
+        
+        cout << endl;
+
+        i++; count--;
+    }
+}
+
+// Question 12 : Print Pattern
+//       *
+//     * * *
+//   * * * * *
+// * * * * * * *
+
+void pattern8()
+{
+
+    int i = 1;
+    int n = 4;
+    int count = 3;
+
+    while (i <= n)
+    {
+        int j = count;
+        while (j >= 1)
+        {
+            cout << " "; 
+            j--;
+        }
+
+        int k = i;
+        while (k >= 1)
+        {
+            cout << "*";
+            k--;
+        }
+
+        int l = i - 1;
+        while (l >= 1)
+        {
+            cout << "*";
+            l--;
+        }
+        cout << endl;
+
+        i++; count--;
+    }
+
+}

@@ -18,5 +18,5 @@ int main()
 	cout << height(root);*/
 
 
-	reverse("sameer");
+	pattern8();
 }
