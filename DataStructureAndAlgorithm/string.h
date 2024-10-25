@@ -10,4 +10,8 @@ int firstUniqChar(std::string s);
 
 void reverse(std::string str);
 
+void palindrome();
+
+void maxOccuring();
+
 #endif

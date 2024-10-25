@@ -18,5 +18,6 @@ int main()
 	cout << height(root);*/
 
 
-	pattern8();
+	maxOccuring();
+
 }

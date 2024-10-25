@@ -22,4 +22,18 @@ void pattern6();
 void pattern7();
 void pattern8();
 
+void prod_sum();
+
+void reverse_int();
+
+void Swap_alternative();
+
+void Find_unique();
+
+void unique_occurence();
+
+void zeros_ones();
+
+void BinarySearch();
+
 #endif

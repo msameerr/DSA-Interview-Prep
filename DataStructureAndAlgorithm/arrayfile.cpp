@@ -414,3 +414,205 @@ void pattern8()
     }
 
 }
+
+// Question 13 : Product and sum of int
+// input -> 1232
+// prod -> 12, Sum -> 8
+
+void prod_sum()
+{
+
+    int num = 1232;
+    int prod = 1, sum = 0;
+
+    while (num != 0)
+    {
+
+        int n = num % 10;
+
+        prod *= n;
+        sum += n;
+
+        num = num / 10;
+
+    }
+    cout << "Product " << prod << endl;
+    cout << "sum : " << sum << endl;
+}
+
+
+// Question 14 : Reverse int
+// 123 -> 321
+void reverse_int()
+{
+
+    int num = 123;
+    int ans = 0;
+    while (num != 0)
+    {
+
+        int n = num % 10;
+
+        ans = (ans * 10) + n;
+
+        num = num / 10;
+
+    }
+    cout << "Reverse : " << ans;
+}
+
+
+// Question 15 : swap alternative
+// 1 2 3 4 5 -> 2 1 4 3 5
+
+void Swap_alternative()
+{
+
+    int arr[6] = { 1,2,3,4,5,6 };
+    int n = 6;
+
+    int i = 0;
+    while (i < n)
+    {
+        if (i + 1 < n)
+        {
+            int temp = arr[i];
+            arr[i] = arr[i + 1];
+            arr[i + 1] = temp;
+        }
+      
+        i += 2;
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i] << " ";
+    }
+}
+
+
+// Question 16 : Find Unique in array of Duplicate
+void Find_unique()
+{
+    int arr[7] = { 1,2,3,1,3,4,2 };
+    int n = 7;
+
+    int ans = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+        ans = ans ^ arr[i];
+    }
+    cout << "Unique : " << ans;
+}
+
+// Question 17 : Find Unique Occurence in an array
+void unique_occurence()
+{
+    int arr[8] = { 1,2,2,2,1,1,3 };
+    int n = 7;
+
+    map<int, int> count;
+
+    for (int i = 0; i < n; i++)
+    {
+        count[arr[i]]++;
+    }
+
+    int check[10];
+    int j = 0;
+    for (auto num : count)
+    {
+        check[j] = num.second;
+        j++;
+    }
+
+    int m = count.size();
+    for (int i = 0; i < m; i++)
+    {
+        if (check[i] != check[i + 1])
+        {
+            cout << "unique Occurence";
+            break;
+        }
+    }
+
+}
+
+
+// Question 18 : Sort zeros ans ones
+void zeros_ones()
+{
+
+    int arr[8] = { 1,1,0,0,0,0,1,0 };
+    int n = 8;
+
+    int start = 0;
+    int end = n - 1;
+
+    while (start < end)
+    {
+
+        if (arr[start] == 1 && arr[end] == 0)
+        {
+            swap(arr[start], arr[end]);
+            start++;
+            end--;
+        }
+
+        if (arr[start] == 0 && arr[end] == 0)
+        {
+            start++;
+        }
+
+        if (arr[start] == 1 && arr[end] == 1)
+        {
+            end--;
+        }
+
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i] << " ";
+    }
+
+}
+
+// Question 19 : Implement binary search
+void BinarySearch()
+{
+
+    int arr[5] = { 1,2,3,4,5 };
+    int n = 5, key = 5;
+
+    int start = 0;
+    int end = n - 1;
+
+    int mid = (start + end) / 2;
+
+    while (start <= end)
+    {
+
+        if (arr[mid] == key)
+        {
+            cout << "key is present : " << arr[mid] << endl;
+            break;
+        }
+
+        if (arr[mid] > key)
+        {
+            end = mid - 1;
+        }
+        
+        if (arr[mid] < key)
+        {
+            start = mid + 1;
+        }
+
+        mid = (start + end) / 2;
+
+
+    }
+
+}

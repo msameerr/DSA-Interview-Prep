@@ -122,3 +122,64 @@ void reverse(string str)
 
     cout << str;
 }
+
+// Question 04 : Valid Plaindrome
+void palindrome()
+{
+
+    string str;
+    cout << "enter string : ";
+    cin >> str;
+
+    int n = str.length();
+    int start = 0;
+    int end = n - 1;
+
+    while (start < end)
+    {
+        if (str[start] == str[end])
+        {
+            start++;
+            end--;
+        }
+        else
+        {
+            cout << "Not Palindrome";
+            break;
+        }
+
+    }
+
+    cout << "Palindrome";
+
+}
+
+// Question 05 : Find the Max Occuring Characters
+void maxOccuring()
+{
+    string str;
+    cout << "enter string : ";
+    cin >> str;
+
+    map <char, int> count;
+
+    int n = str.length();
+
+    for (int i = 0; i < n; i++)
+    {
+        count[str[i]]++;
+    }
+
+    int maxi = INT_MIN;
+    char ans = ' ';
+    for (auto s : count)
+    {
+        if (maxi < s.second)
+        {
+            maxi = s.second;
+            ans = s.first;
+        }
+    }
+
+    cout << "max occuring : " << ans;
+}
